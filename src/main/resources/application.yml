@@ -3,6 +3,9 @@ eureka:
     service-url:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
     enabled: true
+    prefer-same-zone-eureka: true
   instance:
     prefer-ip-address: true
-    lease-renewal-interval-in-seconds: 30
+    lease-renewal-interval-in-seconds: 35
+    metadata-map:
+      zone: zone_A
